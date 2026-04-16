@@ -2,374 +2,848 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manjeet Singh | Web Developer CV</title>
-    <!-- Font Awesome CDN for icons -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Manjeet Singh | Professional CV · Web Developer</title>
+    <!-- Font Awesome 6 (free icons) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    />
+    <!-- Google Fonts: clean modern sans-serif -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
     />
     <style>
       * {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
       }
+
       body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f4f7fb;
-        color: #1f2937;
-        line-height: 1.6;
-      }
-      .container {
-        max-width: 1100px;
-        margin: 40px auto;
-        background: #ffffff;
-        border-radius: 18px;
-        overflow: hidden;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-        display: grid;
-        grid-template-columns: 320px 1fr;
-      }
-      .sidebar {
-        background: linear-gradient(180deg, #0f172a, #1e293b);
-        color: #fff;
-        padding: 36px 28px;
-        text-align: center;
+        background: #eef2f8;
+        font-family: "Inter", sans-serif;
+        color: #1e2a3e;
+        line-height: 1.45;
+        padding: 40px 24px;
       }
 
-      .profile-img {
-        width: 120px;
-        height: 120px;
+      /* Single-column card container */
+      .cv-card {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 32px;
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        transition: all 0.2s;
+      }
+
+      .cv-inner {
+        padding: 22px 24px 30px;
+      }
+
+      /* ===== HEADER SECTION (professional single column) ===== */
+      .header-top {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 22px;
+        margin-bottom: 18px;
+        padding: 22px 24px;
+        border: 1px solid #dbe5f0;
+        border-radius: 28px;
+        background:
+          radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 32%),
+          linear-gradient(135deg, #f7fbff 0%, #eef4fb 58%, #f9fbfd 100%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      }
+
+      .avatar-circle {
+        width: 118px;
+        height: 118px;
+        background: linear-gradient(135deg, #eef2ff, #dbeafe);
         border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 16px 34px -16px rgba(37, 99, 235, 0.42);
+        border: 4px solid rgba(255, 255, 255, 0.95);
+      }
+
+      .avatar-circle img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        border: 4px solid #3b82f6;
+        display: block;
+      }
+
+      .title-section {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        column-gap: 18px;
+        align-items: center;
+        min-width: 0;
+      }
+
+      .title-section h1 {
+        font-size: 2.6rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        background: linear-gradient(145deg, #0f172a, #1f2b48);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 4px;
+      }
+
+      .role-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.84);
+        padding: 6px 14px;
+        border-radius: 40px;
+        border: 1px solid #d7e4f2;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #1d4ed8;
+        margin-bottom: 0;
+      }
+
+      .title-copy {
+        min-width: 0;
+      }
+
+      .contact-row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 0;
+        justify-self: end;
+        align-items: flex-start;
+      }
+
+      .contact-row span {
+        font-size: 0.8rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 7px 12px;
+        border-radius: 14px;
+        border: 1px solid #dbe6f2;
+        color: #2c3e66;
+      }
+
+      .contact-row i {
+        color: #2563eb;
+        width: 16px;
+      }
+
+      /* Summary block */
+      .summary-elevated {
+        background: #f8fafd;
+        padding: 16px 18px;
+        border-radius: 24px;
+        margin-bottom: 18px;
+        border-left: 5px solid #2563eb;
+        font-size: 0.9rem;
+        line-height: 1.42;
+        color: #1f2a44;
+        font-weight: 460;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      }
+
+      .section-block {
+        background: #f8fafc;
+        border: 1px solid #e5ebf2;
+        border-radius: 24px;
+        padding: 18px 18px;
         margin-bottom: 16px;
       }
 
-      .sidebar h1 {
-        margin: 0;
-        font-size: 28px;
-        line-height: 1.2;
-      }
-      .sidebar .role {
-        margin-top: 8px;
-        font-size: 16px;
-        color: #cbd5e1;
-        font-weight: 600;
-      }
-      .contact,
-      .skills {
-        margin-top: 34px;
-        text-align: left;
-      }
-      .sidebar h3 {
-        font-size: 14px;
+      /* section titles consistent */
+      .section-title {
+        font-size: 1.05rem;
+        font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: #93c5fd;
+        letter-spacing: 1.2px;
+        color: #2563eb;
         margin-bottom: 14px;
-      }
-      .contact p,
-      .skills li {
-        margin: 0 0 12px;
-        font-size: 14px;
-        color: #e5e7eb;
-      }
-      .skills ul {
-        padding-left: 18px;
-        margin: 0;
-      }
-      .main {
-        padding: 40px;
-      }
-      .section {
-        margin-bottom: 34px;
-      }
-      .section h2 {
-        margin: 0 0 14px;
-        font-size: 22px;
-        color: #0f172a;
-        border-bottom: 2px solid #e5e7eb;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: 1.5px solid #e9edf2;
         padding-bottom: 8px;
       }
-      .summary {
-        font-size: 15px;
-        color: #374151;
+
+      .section-block .section-title {
+        margin-bottom: 12px;
       }
-      .item {
-        margin-bottom: 24px;
+
+      .section-title i {
+        font-size: 1rem;
+        color: #2563eb;
       }
-      .item-header {
+
+      /* Skills chips (single column) */
+      .skills-wrapper {
         display: flex;
-        justify-content: space-between;
-        gap: 20px;
         flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 0;
+      }
+
+      .skill-badge {
+        background: #ffffff;
+        border: 1px solid #e2edf7;
+        padding: 8px 18px;
+        border-radius: 44px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: 0.2s;
+        color: #1f2e4a;
+      }
+
+      .skill-badge i {
+        color: #2563eb;
+        font-size: 0.85rem;
+      }
+
+      /* Experience entries */
+      .exp-entry {
+        margin-bottom: 12px;
+        padding: 12px 14px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #e7edf4;
+        break-inside: avoid;
+      }
+
+      .exp-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 5px;
+      }
+
+      .exp-title {
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: #0f172a;
+      }
+
+      .exp-date {
+        font-size: 0.7rem;
+        font-weight: 500;
+        background: #f0f4fa;
+        padding: 4px 12px;
+        border-radius: 30px;
+        color: #2c4c7c;
+      }
+
+      .exp-company {
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: #2563eb;
+        margin: 6px 0 8px 0;
+      }
+
+      .exp-list {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 8px;
+      }
+
+      .exp-list li {
+        font-size: 0.87rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+      }
+
+      .exp-list li i {
+        color: #2563eb;
+        font-size: 0.7rem;
+        margin-top: 4px;
+        width: 18px;
+      }
+
+      /* Projects as horizontal cards (clean) */
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 0;
+      }
+
+      .project-card {
+        background: #fefefe;
+        border-radius: 20px;
+        padding: 12px 14px;
+        border: 1px solid #ecf3fa;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        transition: all 0.2s;
+      }
+
+      .project-card i {
+        font-size: 1.6rem;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #eef2ff;
+        border-radius: 18px;
+        color: #2563eb;
+      }
+
+      .project-info strong {
+        font-weight: 700;
+        font-size: 0.95rem;
+        display: block;
         margin-bottom: 6px;
       }
-      .item-title {
-        font-size: 18px;
-        font-weight: 700;
-        color: #111827;
+
+      .project-info p {
+        font-size: 0.8rem;
+        color: #49627e;
+        line-height: 1.4;
       }
-      .item-subtitle {
-        font-size: 15px;
-        color: #2563eb;
-        font-weight: 600;
+
+      /* Education row */
+      .edu-item {
+        margin-bottom: 12px;
+        padding: 12px 14px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #e7edf4;
+        break-inside: avoid;
       }
-      .item-date {
-        font-size: 14px;
-        color: #6b7280;
-        font-weight: 600;
+
+      .section-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        margin-top: 8px;
       }
-      ul.points {
-        margin: 10px 0 0;
-        padding-left: 20px;
+
+      .meta-list {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
       }
-      ul.points li {
-        margin-bottom: 8px;
-        color: #374151;
-        font-size: 15px;
+
+      .meta-pill {
+        font-size: 0.8rem;
+        background: #ffffff;
+        border: 1px solid #e7edf4;
+        padding: 5px 12px;
+        border-radius: 30px;
       }
-      .project-card {
-        background: #f8fafc;
-        border: 1px solid #e5e7eb;
-        border-radius: 14px;
-        padding: 18px;
-        margin-bottom: 16px;
+
+      .edu-title {
+        font-weight: 800;
+        font-size: 1rem;
       }
-      .project-card h4 {
-        margin: 0 0 8px;
-        font-size: 17px;
-        color: #111827;
+
+      .edu-meta {
+        font-size: 0.8rem;
+        color: #2d4a7c;
+        margin: 4px 0 6px;
+        font-weight: 500;
       }
-      .project-card p {
-        margin: 0;
-        font-size: 15px;
-        color: #4b5563;
+
+      .small-note {
+        font-size: 0.78rem;
+        color: #4b6b8f;
+        margin-top: 5px;
       }
-      @media (max-width: 860px) {
-        .container {
+
+      hr {
+        margin: 18px 0;
+        border: 0;
+        height: 1px;
+        background: #eef2f8;
+      }
+
+      .footer-note {
+        margin-top: 32px;
+        text-align: center;
+        font-size: 0.7rem;
+        color: #7c8ea0;
+        border-top: 1px solid #ecf3fa;
+        padding-top: 24px;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 700px) {
+        .cv-inner {
+          padding: 18px 16px 24px;
+        }
+        .header-top {
           grid-template-columns: 1fr;
+          gap: 14px;
+          padding: 18px 16px;
+        }
+        .section-block {
+          padding: 18px;
+        }
+        .projects-container {
+          grid-template-columns: 1fr;
+        }
+        .avatar-circle {
+          width: 96px;
+          height: 96px;
+        }
+        .title-section {
+          grid-template-columns: 1fr;
+          row-gap: 10px;
+        }
+        .title-section h1 {
+          font-size: 2.15rem;
+        }
+        .contact-row {
+          justify-self: stretch;
+        }
+        .contact-row span {
+          font-size: 0.75rem;
+          padding: 6px 10px;
+        }
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 5mm;
+        }
+
+        body {
+          background: white;
+          padding: 0;
           margin: 0;
+          font-size: 11px;
+          line-height: 1.28;
+          zoom: 0.84;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .cv-card {
+          max-width: 100%;
           border-radius: 0;
+          box-shadow: none;
         }
-        .main {
-          padding: 28px 22px;
+        .cv-inner {
+          padding: 0;
         }
-        .sidebar {
-          padding: 28px 22px;
+        .header-top {
+          gap: 14px;
+          margin-bottom: 10px;
+          padding: 12px 14px;
+          border-radius: 14px;
+          background: #f7f9fc;
+          border-color: #d8dee6;
+          box-shadow: none;
+        }
+        .avatar-circle {
+          width: 84px;
+          height: 84px;
+          border-width: 2px;
+          box-shadow: none;
+        }
+        .title-section {
+          column-gap: 10px;
+        }
+        .title-section h1 {
+          font-size: 2rem;
+          margin-bottom: 2px;
+        }
+        .role-tag {
+          font-size: 0.72rem;
+          padding: 4px 10px;
+        }
+        .contact-row {
+          gap: 5px;
+        }
+        .contact-row span {
+          font-size: 0.7rem;
+          padding: 4px 8px;
+          border-radius: 10px;
+        }
+        .summary-elevated {
+          padding: 10px 12px;
+          margin-bottom: 10px;
+          border-left-width: 3px;
+          font-size: 0.78rem;
+          line-height: 1.3;
+        }
+        .section-block {
+          padding: 10px 12px;
+          margin-bottom: 8px;
+          border-radius: 14px;
+        }
+        .section-title {
+          font-size: 0.82rem;
+          margin-bottom: 8px;
+          padding-bottom: 5px;
+          letter-spacing: 0.8px;
+        }
+        .section-block .section-title {
+          margin-bottom: 7px;
+        }
+        .skills-wrapper {
+          gap: 6px;
+        }
+        .skill-badge {
+          font-size: 0.68rem;
+          padding: 4px 9px;
+        }
+        .exp-entry,
+        .project-card,
+        .edu-item {
+          padding: 8px 10px;
+          margin-bottom: 7px;
+          border-radius: 12px;
+        }
+        .exp-title,
+        .edu-title,
+        .project-info strong {
+          font-size: 0.82rem;
+        }
+        .exp-date {
+          font-size: 0.6rem;
+          padding: 3px 8px;
+        }
+        .exp-company,
+        .edu-meta,
+        .project-info p,
+        .small-note,
+        .exp-list li {
+          font-size: 0.68rem;
+          line-height: 1.24;
+        }
+        .exp-company {
+          margin: 4px 0 5px 0;
+        }
+        .exp-list {
+          margin-top: 5px;
+        }
+        .exp-list li {
+          margin-bottom: 5px;
+          gap: 7px;
+        }
+        .project-card {
+          gap: 9px;
+        }
+        .project-card i {
+          width: 34px;
+          height: 34px;
+          font-size: 1rem;
+          border-radius: 10px;
+        }
+        .project-info strong {
+          margin-bottom: 3px;
+        }
+        .edu-meta {
+          margin: 2px 0 3px;
+        }
+        .small-note {
+          margin-top: 3px;
+        }
+        .footer-note {
+          display: none;
+        }
+        .summary-elevated,
+        .section-block,
+        .exp-entry,
+        .project-card,
+        .edu-item,
+        .meta-pill {
+          background: #fbfbfb;
+          box-shadow: none;
+        }
+        .section-block,
+        .exp-entry,
+        .project-card,
+        .edu-item,
+        .meta-pill,
+        .skill-badge {
+          border-color: #d8dee6;
+        }
+        .skill-badge {
+          background: #f9fafb;
+        }
+        .project-card {
+          break-inside: avoid;
+        }
+        .contact-row span,
+        .role-tag {
+          background: #ffffff;
+          border-color: #d8dee6;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <aside class="sidebar">
-        <!-- Replace profile.jpg with your actual image -->
-        <img src="manjeet.png" alt="Manjeet Singh" class="profile-img" />
-        <h1>Manjeet Singh</h1>
-        <div class="role">Web Developer</div>
-
-        <div class="contact">
-          <h3>Contact</h3>
-          <p>
-            <i class="fa-solid fa-location-dot" style="width: 18px"></i>
-            Sanjauli, Shimla, Himachal Pradesh, India 171009
-          </p>
-          <p>
-            <i class="fa-solid fa-phone" style="width: 18px"></i> +91 9816662200
-          </p>
-          <p>
-            <i class="fa-solid fa-envelope" style="width: 18px"></i>
-            manjeet-singh-97@outlook.com
-          </p>
+    <div class="cv-card">
+      <div class="cv-inner">
+        <!-- Header single column: avatar + info -->
+        <div class="header-top">
+          <div class="avatar-circle">
+            <img src="./manjeet.png" alt="Portrait of Manjeet Singh" />
+          </div>
+          <div class="title-section">
+            <div class="title-copy">
+              <h1>Manjeet Singh</h1>
+              <div class="role-tag">
+                <i class="fa-solid fa-code"></i> Web Developer
+              </div>
+            </div>
+            <div class="contact-row">
+              <span
+                ><i class="fa-solid fa-location-dot"></i> Sanjauli, Shimla,
+                Himachal Pradesh, India 171009</span
+              >
+              <span><i class="fa-solid fa-phone-alt"></i> +91 9816662200</span>
+              <span
+                ><i class="fa-regular fa-envelope"></i>
+                manjeet-singh-97@outlook.com</span
+              >
+            </div>
+          </div>
         </div>
 
-        <div class="skills">
-          <h3>Skills</h3>
-          <ul>
-            <li><i class="fa-brands fa-php" style="width: 18px"></i> PHP</li>
-            <li>
-              <i class="fa-brands fa-html5" style="width: 18px"></i> HTML,
-              <i class="fa-brands fa-css3-alt"></i> CSS,
-              <i class="fa-brands fa-js"></i> JavaScript
-            </li>
-            <li><i class="fa-brands fa-js"></i> jQuery, Ajax</li>
-            <li>
-              <i class="fa-brands fa-laravel" style="width: 18px"></i> Laravel
-            </li>
-            <li>
-              <i class="fa-brands fa-wordpress" style="width: 18px"></i>
-              WordPress
-            </li>
-            <li>
-              <i class="fa-solid fa-cart-shopping" style="width: 18px"></i>
-              E-commerce Development
-            </li>
-            <li>
-              <i class="fa-solid fa-building" style="width: 18px"></i> CRM
-              Development
-            </li>
-            <li>
-              <i class="fa-solid fa-credit-card" style="width: 18px"></i>
-              Payment Gateway Integration (PhonePe, Razorpay)
-            </li>
-            <li>
-              <i class="fa-solid fa-chart-line" style="width: 18px"></i> Data
-              Reporting & Business Insights
-            </li>
-            <li>
-              <i
-                class="fa-solid fa-magnifying-glass-chart"
-                style="width: 18px"
-              ></i>
-              SEO Optimization
-            </li>
-          </ul>
+        <!-- Professional Summary -->
+        <div class="summary-elevated">
+          <i
+            class="fa-solid fa-quote-left"
+            style="color: #2563eb; opacity: 0.5; margin-right: 6px"
+          ></i>
+          Experienced Web Developer with strong expertise in PHP and Laravel,
+          specializing in CRM systems, travel platforms, hotel solutions, and
+          sports registration systems. Skilled in developing scalable web
+          applications, improving performance, and maintaining websites with a
+          focus on usability, functionality, and SEO.
         </div>
-      </aside>
 
-      <main class="main">
-        <section class="section">
-          <h2>Professional Summary</h2>
-          <p class="summary">
-            Experienced Web Developer with strong expertise in PHP and Laravel,
-            specializing in CRM systems, travel platforms, hotel solutions, and
-            sports registration systems. Skilled in developing scalable web
-            applications, improving performance, and maintaining websites with a
-            focus on usability, functionality, and SEO.
-          </p>
-        </section>
+        <!-- ========== SKILLS SECTION ========== -->
+        <div class="section-block">
+          <div class="section-title">
+            <i class="fa-solid fa-microchip"></i> Technical Expertise
+          </div>
+          <div class="skills-wrapper">
+            <span class="skill-badge"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="skill-badge"
+              ><i class="fa-brands fa-html5"></i> HTML, CSS, JavaScript</span
+            >
+            <span class="skill-badge"
+              ><i class="fa-brands fa-js"></i> jQuery, Ajax</span
+            >
+            <span class="skill-badge"
+              ><i class="fa-brands fa-laravel"></i> Laravel</span
+            >
+            <span class="skill-badge"
+              ><i class="fa-brands fa-wordpress"></i> WordPress</span
+            >
+            <span class="skill-badge"
+              ><i class="fa-solid fa-cart-shopping"></i> E-commerce
+              Development</span
+            >
+            <span class="skill-badge"
+              ><i class="fa-solid fa-users-gear"></i> CRM Development</span
+            >
+            <span class="skill-badge"
+              ><i class="fa-solid fa-credit-card"></i> Payment Gateway
+              Integration (PhonePe, Razorpay)</span
+            >
+            <span class="skill-badge"
+              ><i class="fa-solid fa-chart-line"></i> Data Reporting & Business
+              Insights</span
+            >
+            <span class="skill-badge"
+              ><i class="fa-solid fa-magnifying-glass"></i> SEO
+              Optimization</span
+            >
+          </div>
+        </div>
 
-        <section class="section">
-          <h2>Experience</h2>
-
-          <div class="item">
-            <div class="item-header">
-              <div>
-                <div class="item-title">Web Developer</div>
-                <div class="item-subtitle">DeployDash · Sanjauli, Shimla</div>
-              </div>
-              <div class="item-date">August 2024 – Present</div>
+        <!-- ========== WORK EXPERIENCE (single column, detailed) ========== -->
+        <div class="section-block">
+          <div class="section-title">
+            <i class="fa-solid fa-briefcase"></i> Professional Experience
+          </div>
+          <div class="exp-entry">
+            <div class="exp-header">
+              <div class="exp-title">Web Developer</div>
+              <div class="exp-date">August 2024 – Present</div>
             </div>
-            <ul class="points">
+            <div class="exp-company">
+              <i class="fa-regular fa-building"></i> DeployDash · Sanjauli,
+              Shimla
+            </div>
+            <ul class="exp-list">
               <li>
-                Working on development and maintenance of multiple CRM projects
-                for travel and hospitality businesses, with modules focused on
-                operations, bookings, customer workflows, and business
-                automation.
+                <i class="fa-regular fa-circle-check"></i> Working on
+                development and maintenance of multiple CRM projects for travel
+                and hospitality businesses, with modules focused on operations,
+                bookings, customer workflows, and business automation.
               </li>
               <li>
-                Building and improving Laravel-based modules for business
-                workflows, customer management, payment integration, and
-                operational efficiency.
+                <i class="fa-regular fa-circle-check"></i> Building and
+                improving Laravel-based modules for business workflows, customer
+                management, payment integration, and operational efficiency.
               </li>
               <li>
-                Collaborating with team members to create efficient and scalable
-                web solutions, including reporting dashboards and data-driven
-                insights for business decision-making.
+                <i class="fa-regular fa-circle-check"></i> Collaborating with
+                team members to create efficient and scalable web solutions,
+                including reporting dashboards and data-driven insights for
+                business decision-making.
               </li>
             </ul>
           </div>
 
-          <div class="item">
-            <div class="item-header">
-              <div>
-                <div class="item-title">Web Developer</div>
-                <div class="item-subtitle">
-                  SoundVisionary · Sanjauli, Shimla
-                </div>
-              </div>
-              <div class="item-date">March 2022 – Present</div>
+          <div class="exp-entry">
+            <div class="exp-header">
+              <div class="exp-title">Web Developer</div>
+              <div class="exp-date">March 2022 – Present</div>
             </div>
-            <ul class="points">
+            <div class="exp-company">
+              <i class="fa-regular fa-building"></i> SoundVisionary · Sanjauli,
+              Shimla
+            </div>
+            <ul class="exp-list">
               <li>
-                Developed registration platforms for multiple cricket leagues
-                and sports events with streamlined admin workflows and
-                user-friendly interfaces.
+                <i class="fa-regular fa-circle-check"></i> Developed
+                registration platforms for multiple cricket leagues and sports
+                events with streamlined admin workflows and user-friendly
+                interfaces.
               </li>
               <li>
-                Built auction software solutions for different clients, along
-                with payment-related and event management features tailored to
-                client requirements.
+                <i class="fa-regular fa-circle-check"></i> Built auction
+                software solutions for different clients, along with
+                payment-related and event management features tailored to client
+                requirements.
               </li>
               <li>
-                Maintained website functionality, implemented SEO improvements,
-                and supported reporting features to help clients track
-                engagement and business performance.
+                <i class="fa-regular fa-circle-check"></i> Maintained website
+                functionality, implemented SEO improvements, and supported
+                reporting features to help clients track engagement and business
+                performance.
               </li>
             </ul>
           </div>
-        </section>
+        </div>
 
-        <section class="section">
-          <h2>Projects</h2>
-
-          <div class="project-card">
-            <h4>Laravel Travel CRM</h4>
-            <p>
-              Developed and maintained CRM modules for travel operations,
-              including lead handling, itinerary workflows, quotation
-              management, payment integration, and business process support for
-              travel and hotel-related services.
-            </p>
+        <!-- ========== FEATURED PROJECTS (single column cards) ========== -->
+        <div class="section-block">
+          <div class="section-title">
+            <i class="fa-solid fa-diagram-project"></i> Key Projects
           </div>
-
-          <div class="project-card">
-            <h4>Hotel & Hospitality CRM</h4>
-            <p>
-              Worked on hospitality-focused web systems for managing customer
-              data, operations, internal workflows, transaction handling, and
-              reporting using Laravel and modern web technologies.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <h4>Cricket League Registration System</h4>
-            <p>
-              Built registration platforms for cricket tournaments with
-              admin-friendly workflows, event management support, payment
-              gateway integration, and optimized web pages for better reach and
-              engagement.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <h4>Auction Software for Sports Events</h4>
-            <p>
-              Created auction systems for client projects, helping organizers
-              manage event activities, participant-related workflows, payment
-              tracking, and performance reporting in a structured way.
-            </p>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2>Education</h2>
-          <div class="item">
-            <div class="item-header">
-              <div>
-                <div class="item-title">Senior Secondary (+2, Commerce)</div>
-                <div class="item-subtitle">
-                  Govt. Sec School Chotta Shimla, Shimla
-                </div>
+          <div class="projects-container">
+            <div class="project-card">
+              <i class="fa-solid fa-plane-departure"></i>
+              <div class="project-info">
+                <strong>Laravel Travel CRM</strong>
+                <p>
+                  Developed and maintained CRM modules for travel operations,
+                  including lead handling, itinerary workflows, quotation
+                  management, payment integration, and business process support
+                  for travel and hotel-related services.
+                </p>
               </div>
-              <div class="item-date">2013 – 2015</div>
             </div>
-            <ul class="points">
-              <li>
-                Completed senior secondary education with a Commerce
-                specialization.
-              </li>
-              <li>
-                Built a strong foundation in business, finance, and economics.
-              </li>
-            </ul>
+            <div class="project-card">
+              <i class="fa-solid fa-hotel"></i>
+              <div class="project-info">
+                <strong>Hotel & Hospitality CRM</strong>
+                <p>
+                  Worked on hospitality-focused web systems for managing
+                  customer data, operations, internal workflows, transaction
+                  handling, and reporting using Laravel and modern web
+                  technologies.
+                </p>
+              </div>
+            </div>
+            <div class="project-card">
+              <i class="fa-solid fa-baseball-bat-ball"></i>
+              <div class="project-info">
+                <strong>Cricket League Registration System</strong>
+                <p>
+                  Built registration platforms for cricket tournaments with
+                  admin-friendly workflows, event management support, payment
+                  gateway integration, and optimized web pages for better reach
+                  and engagement.
+                </p>
+              </div>
+            </div>
+            <div class="project-card">
+              <i class="fa-solid fa-gavel"></i>
+              <div class="project-info">
+                <strong>Auction Software for Sports Events</strong>
+                <p>
+                  Created auction systems for client projects, helping
+                  organizers manage event activities, participant-related
+                  workflows, payment tracking, and performance reporting in a
+                  structured way.
+                </p>
+              </div>
+            </div>
           </div>
-        </section>
-      </main>
+        </div>
+
+        <!-- ========== EDUCATION & CREDENTIALS ========== -->
+        <div class="section-block">
+          <div class="section-title">
+            <i class="fa-solid fa-graduation-cap"></i> Education
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Senior Secondary (+2, Commerce)</div>
+            <div class="edu-meta">Govt. Sec School Chotta Shimla, Shimla</div>
+            <div class="edu-meta">2013 – 2015</div>
+            <div class="small-note">
+              Completed senior secondary education with a Commerce
+              specialization. Built a strong foundation in business, finance,
+              and economics.
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Diploma in Basic Computer</div>
+            <div class="edu-meta">Computer Fundamentals & Office Tools</div>
+            <div class="small-note">
+              Learned basic computer operations, typing, internet usage, file
+              handling, and essential office productivity tools.
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Self-Taught Coder</div>
+            <div class="edu-meta">Practical Learning Through Real Projects</div>
+            <div class="small-note">
+              Built coding knowledge through self-learning, hands-on practice,
+              and real-world work in PHP, Laravel, JavaScript, CRM systems, and
+              web application development.
+            </div>
+          </div>
+        </div>
+
+        <!-- footer line -->
+        <div class="footer-note">
+          <i class="fa-regular fa-copyright"></i> Manjeet Singh | Web Developer
+        </div>
+      </div>
     </div>
   </body>
 </html>
