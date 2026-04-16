@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manjeet Singh | Web Developer CV</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f7fb;
+        color: #1f2937;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: #ffffff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        display: grid;
+        grid-template-columns: 320px 1fr;
+      }
+      .sidebar {
+        background: linear-gradient(180deg, #0f172a, #1e293b);
+        color: #fff;
+        padding: 36px 28px;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #3b82f6;
+        margin-bottom: 16px;
+      }
+
+      .sidebar h1 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+      .sidebar .role {
+        margin-top: 8px;
+        font-size: 16px;
+        color: #cbd5e1;
+        font-weight: 600;
+      }
+      .contact,
+      .skills {
+        margin-top: 34px;
+        text-align: left;
+      }
+      .sidebar h3 {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #93c5fd;
+        margin-bottom: 14px;
+      }
+      .contact p,
+      .skills li {
+        margin: 0 0 12px;
+        font-size: 14px;
+        color: #e5e7eb;
+      }
+      .skills ul {
+        padding-left: 18px;
+        margin: 0;
+      }
+      .main {
+        padding: 40px;
+      }
+      .section {
+        margin-bottom: 34px;
+      }
+      .section h2 {
+        margin: 0 0 14px;
+        font-size: 22px;
+        color: #0f172a;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 8px;
+      }
+      .summary {
+        font-size: 15px;
+        color: #374151;
+      }
+      .item {
+        margin-bottom: 24px;
+      }
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 6px;
+      }
+      .item-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #111827;
+      }
+      .item-subtitle {
+        font-size: 15px;
+        color: #2563eb;
+        font-weight: 600;
+      }
+      .item-date {
+        font-size: 14px;
+        color: #6b7280;
+        font-weight: 600;
+      }
+      ul.points {
+        margin: 10px 0 0;
+        padding-left: 20px;
+      }
+      ul.points li {
+        margin-bottom: 8px;
+        color: #374151;
+        font-size: 15px;
+      }
+      .project-card {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 16px;
+      }
+      .project-card h4 {
+        margin: 0 0 8px;
+        font-size: 17px;
+        color: #111827;
+      }
+      .project-card p {
+        margin: 0;
+        font-size: 15px;
+        color: #4b5563;
+      }
+      @media (max-width: 860px) {
+        .container {
+          grid-template-columns: 1fr;
+          margin: 0;
+          border-radius: 0;
+        }
+        .main {
+          padding: 28px 22px;
+        }
+        .sidebar {
+          padding: 28px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <!-- Replace profile.jpg with your actual image -->
+        <img src="manjeet.png" alt="Manjeet Singh" class="profile-img" />
+        <h1>Manjeet Singh</h1>
+        <div class="role">Web Developer</div>
+
+        <div class="contact">
+          <h3>Contact</h3>
+          <p>Sanjauli, Shimla, Himachal Pradesh, India 171009</p>
+          <p>+91 9816662200</p>
+          <p>manjeet-singh-97@outlook.com</p>
+        </div>
+
+        <div class="skills">
+          <h3>Skills</h3>
+          <ul>
+            <li>PHP</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>jQuery, Ajax</li>
+            <li>Laravel</li>
+            <li>WordPress</li>
+            <li>E-commerce Development</li>
+            <li>CRM Development</li>
+            <li>Payment Gateway Integration (PhonePe, Razorpay)</li>
+            <li>Data Reporting & Business Insights</li>
+            <li>SEO Optimization</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="section">
+          <h2>Professional Summary</h2>
+          <p class="summary">
+            Experienced Web Developer with strong expertise in PHP and Laravel,
+            specializing in CRM systems, travel platforms, hotel solutions, and
+            sports registration systems. Skilled in developing scalable web
+            applications, improving performance, and maintaining websites with a
+            focus on usability, functionality, and SEO.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Experience</h2>
+
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <div class="item-title">Web Developer</div>
+                <div class="item-subtitle">DeployDash · Sanjauli, Shimla</div>
+              </div>
+              <div class="item-date">August 2024 – Present</div>
+            </div>
+            <ul class="points">
+              <li>
+                Working on development and maintenance of multiple CRM projects
+                for travel and hospitality businesses, with modules focused on
+                operations, bookings, customer workflows, and business
+                automation.
+              </li>
+              <li>
+                Building and improving Laravel-based modules for business
+                workflows, customer management, payment integration, and
+                operational efficiency.
+              </li>
+              <li>
+                Collaborating with team members to create efficient and scalable
+                web solutions, including reporting dashboards and data-driven
+                insights for business decision-making.
+              </li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <div class="item-title">Web Developer</div>
+                <div class="item-subtitle">
+                  SoundVisionary · Sanjauli, Shimla
+                </div>
+              </div>
+              <div class="item-date">March 2022 – Present</div>
+            </div>
+            <ul class="points">
+              <li>
+                Developed registration platforms for multiple cricket leagues
+                and sports events with streamlined admin workflows and
+                user-friendly interfaces.
+              </li>
+              <li>
+                Built auction software solutions for different clients, along
+                with payment-related and event management features tailored to
+                client requirements.
+              </li>
+              <li>
+                Maintained website functionality, implemented SEO improvements,
+                and supported reporting features to help clients track
+                engagement and business performance.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Projects</h2>
+
+          <div class="project-card">
+            <h4>Laravel Travel CRM</h4>
+            <p>
+              Developed and maintained CRM modules for travel operations,
+              including lead handling, itinerary workflows, quotation
+              management, payment integration, and business process support for
+              travel and hotel-related services.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <h4>Hotel & Hospitality CRM</h4>
+            <p>
+              Worked on hospitality-focused web systems for managing customer
+              data, operations, internal workflows, transaction handling, and
+              reporting using Laravel and modern web technologies.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <h4>Cricket League Registration System</h4>
+            <p>
+              Built registration platforms for cricket tournaments with
+              admin-friendly workflows, event management support, payment
+              gateway integration, and optimized web pages for better reach and
+              engagement.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <h4>Auction Software for Sports Events</h4>
+            <p>
+              Created auction systems for client projects, helping organizers
+              manage event activities, participant-related workflows, payment
+              tracking, and performance reporting in a structured way.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Education</h2>
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <div class="item-title">Senior Secondary (+2, Commerce)</div>
+                <div class="item-subtitle">
+                  Govt. Sec School Chotta Shimla, Shimla
+                </div>
+              </div>
+              <div class="item-date">2013 – 2015</div>
+            </div>
+            <ul class="points">
+              <li>
+                Completed senior secondary education with a Commerce
+                specialization.
+              </li>
+              <li>
+                Built a strong foundation in business, finance, and economics.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
