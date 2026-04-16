@@ -35,7 +35,7 @@
       /* Single-column card container */
       .cv-card {
         width: 100%;
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
         background: #ffffff;
         border-radius: 32px;
@@ -59,7 +59,11 @@
         border: 1px solid #dbe5f0;
         border-radius: 28px;
         background:
-          radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 32%),
+          radial-gradient(
+            circle at top right,
+            rgba(37, 99, 235, 0.16),
+            transparent 32%
+          ),
           linear-gradient(135deg, #f7fbff 0%, #eef4fb 58%, #f9fbfd 100%);
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
       }
@@ -83,7 +87,7 @@
 
       .title-section {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-columns: max-content minmax(0, 1fr);
         column-gap: 18px;
         align-items: center;
         min-width: 0;
@@ -93,6 +97,7 @@
         font-size: 2.6rem;
         font-weight: 800;
         letter-spacing: -0.02em;
+        white-space: nowrap;
         background: linear-gradient(145deg, #0f172a, #1f2b48);
         background-clip: text;
         -webkit-background-clip: text;
@@ -115,17 +120,23 @@
       }
 
       .title-copy {
-        min-width: 0;
+        width: auto;
+        min-width: max-content;
+        padding-right: 6px;
       }
 
       .contact-row {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: max-content max-content;
         gap: 8px;
         margin-top: 0;
         justify-self: end;
         align-items: flex-start;
+      }
+
+      .contact-row span:first-child {
+        grid-column: 1 / -1;
+        width: 100%;
       }
 
       .contact-row span {
@@ -419,10 +430,15 @@
         }
         .contact-row {
           justify-self: stretch;
+          flex-direction: column;
+          display: flex;
         }
         .contact-row span {
           font-size: 0.75rem;
           padding: 6px 10px;
+        }
+        .contact-row span:first-child {
+          width: auto;
         }
       }
 
@@ -646,7 +662,9 @@
             <i class="fa-solid fa-microchip"></i> Technical Expertise
           </div>
           <div class="skills-wrapper">
-            <span class="skill-badge"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="skill-badge"
+              ><i class="fa-brands fa-php"></i> PHP</span
+            >
             <span class="skill-badge"
               ><i class="fa-brands fa-html5"></i> HTML, CSS, JavaScript</span
             >
