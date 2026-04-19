@@ -441,6 +441,41 @@
         word-break: break-word;
       }
 
+      .links-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .link-item {
+        background: #ffffff;
+        border: 1px solid #e7edf4;
+        border-radius: 10px;
+        padding: 6px 8px;
+        font-size: 0.73rem;
+      }
+
+      .link-item a {
+        color: #1d4ed8;
+        text-decoration: none;
+        overflow-wrap: anywhere;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1.25;
+      }
+
+      .link-favicon {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #dbe6f2;
+        flex-shrink: 0;
+      }
+
       /* Responsive adjustments */
       @media (max-width: 700px) {
         body {
@@ -466,6 +501,14 @@
         .projects-container {
           grid-template-columns: 1fr;
           gap: 10px;
+        }
+        .links-list {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+        .link-item {
+          font-size: 0.72rem;
+          padding: 7px 8px;
         }
         .avatar-circle {
           width: 84px;
@@ -1014,8 +1057,8 @@
             <ul class="exp-list">
               <li>
                 <i class="fa-regular fa-circle-check"></i> Built strong
-                operational foundations in customer service, documentation,
-                data processing, coordination, and backend support.
+                operational foundations in customer service, documentation, data
+                processing, coordination, and backend support.
               </li>
               <li>
                 <i class="fa-regular fa-circle-check"></i> Worked across office,
@@ -1083,6 +1126,131 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-title">
+            <i class="fa-solid fa-link"></i> Project Links
+          </div>
+          <ul class="links-list">
+            <li class="link-item">
+              <a href="https://deploydash.net" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=deploydash.net&sz=64"
+                  alt=""
+                />deploydash.net</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://soundvisionarymedia.in" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=soundvisionarymedia.in&sz=64"
+                  alt=""
+                />soundvisionarymedia.in</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://prohpcl.com" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=prohpcl.com&sz=64"
+                  alt=""
+                />prohpcl.com</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://onlineplayerauction.in" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=onlineplayerauction.in&sz=64"
+                  alt=""
+                />onlineplayerauction.in</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://soundvisionary.in" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=soundvisionary.in&sz=64"
+                  alt=""
+                />soundvisionary.in</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://dafitness.in" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=dafitness.in&sz=64"
+                  alt=""
+                />dafitness.in</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://www.sukhvasavillas.com" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=sukhvasavillas.com&sz=64"
+                  alt=""
+                />sukhvasavillas.com</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://groombridge.in/" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=groombridge.in&sz=64"
+                  alt=""
+                />groombridge.in</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://bikebros.in/" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=bikebros.in&sz=64"
+                  alt=""
+                />bikebros.in</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://friendsclubnerwa.com" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=friendsclubnerwa.com&sz=64"
+                  alt=""
+                />friendsclubnerwa.com</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://oakwoodhamletresorts.com" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=oakwoodhamletresorts.com&sz=64"
+                  alt=""
+                />oakwoodhamletresorts.com</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://wisehimachal.com" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=wisehimachal.com&sz=64"
+                  alt=""
+                />wisehimachal.com</a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://bajrangbouncers.com/" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=bajrangbouncers.com&sz=64"
+                  alt=""
+                />bajrangbouncers.com</a
+              >
+            </li>
+          </ul>
         </div>
 
         <!-- ========== EDUCATION & CREDENTIALS ========== -->
