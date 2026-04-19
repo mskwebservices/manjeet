@@ -151,6 +151,15 @@
         color: #2c3e66;
       }
 
+      .contact-row a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .contact-row a:hover {
+        text-decoration: underline;
+      }
+
       .contact-row i {
         color: #2563eb;
         width: 16px;
@@ -401,6 +410,37 @@
         padding-top: 24px;
       }
 
+      .qr-section {
+        margin-top: 12px;
+        padding: 14px;
+        border-radius: 16px;
+        border: 1px solid #e7edf4;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        justify-content: center;
+      }
+
+      .qr-section img {
+        width: 90px;
+        height: 90px;
+        border-radius: 8px;
+        border: 1px solid #d8dee6;
+      }
+
+      .qr-copy {
+        font-size: 0.78rem;
+        color: #334e73;
+        line-height: 1.35;
+      }
+
+      .qr-copy a {
+        color: #1d4ed8;
+        text-decoration: none;
+        word-break: break-word;
+      }
+
       /* Responsive adjustments */
       @media (max-width: 700px) {
         .cv-inner {
@@ -500,6 +540,10 @@
           padding: 4px 8px;
           border-radius: 10px;
         }
+
+        .contact-row a {
+          text-decoration: none;
+        }
         .summary-elevated {
           padding: 10px 12px;
           margin-bottom: 10px;
@@ -583,6 +627,21 @@
         .footer-note {
           display: none;
         }
+        .qr-section {
+          margin-top: 8px;
+          padding: 8px 10px;
+          border-radius: 10px;
+          gap: 8px;
+        }
+        .qr-section img {
+          width: 58px;
+          height: 58px;
+          border-radius: 4px;
+        }
+        .qr-copy {
+          font-size: 0.65rem;
+          line-height: 1.2;
+        }
         .summary-elevated,
         .section-block,
         .exp-entry,
@@ -639,6 +698,19 @@
                 ><i class="fa-regular fa-envelope"></i>
                 manjeet-singh-97@outlook.com</span
               >
+              <span
+                ><i class="fa-brands fa-linkedin"></i>
+                <a
+                  href="https://www.linkedin.com/in/manjeet-singh-shimla-himachal-pradesh/"
+                  >linkedin.com/in/manjeet-singh-shimla-himachal-pradesh</a
+                ></span
+              >
+              <span
+                ><i class="fa-solid fa-link"></i>
+                <a href="https://mskwebservices.github.io/manjeet/"
+                  >mskwebservices.github.io/manjeet/</a
+                ></span
+              >
             </div>
           </div>
         </div>
@@ -649,12 +721,11 @@
             class="fa-solid fa-quote-left"
             style="color: #2563eb; opacity: 0.5; margin-right: 6px"
           ></i>
-          Experienced Web Developer with strong expertise in PHP and Laravel,
-          specializing in CRM systems, travel platforms, hotel solutions, and
-          sports registration systems. Skilled in developing scalable web
-          applications, improving performance, and maintaining websites with a
-          focus on usability, functionality, SEO, and AI-assisted development
-          using tools like ChatGPT, Codex, and Antigravity.
+          Web Developer with hands-on experience delivering CRM and operations
+          platforms for travel, hospitality, and sports domains using PHP and
+          Laravel. Bringing 11+ years of practical web development experience,
+          with current focus on scalable business workflows, reporting,
+          SEO-driven growth, and AI-assisted delivery.
         </div>
 
         <!-- ========== SKILLS SECTION ========== -->
@@ -699,7 +770,7 @@
             >
             <span class="skill-badge"
               ><i class="fa-solid fa-robot"></i> AI-Assisted Development
-              (ChatGPT, Codex, Antigravity, Other AI Tools)</span
+              (ChatGPT, Codex, Antigravity)</span
             >
           </div>
         </div>
@@ -712,35 +783,61 @@
           <div class="exp-entry">
             <div class="exp-header">
               <div class="exp-title">Web Developer</div>
-              <div class="exp-date">August 2024 – Present</div>
+              <div class="exp-date">Feb 2024 – Present</div>
             </div>
             <div class="exp-company">
-              <i class="fa-regular fa-building"></i> DeployDash · Sanjauli,
-              Shimla
+              <i class="fa-regular fa-building"></i> DeployDash · Full-time ·
+              Shimla, Himachal Pradesh, India
             </div>
             <ul class="exp-list">
               <li>
-                <i class="fa-regular fa-circle-check"></i> Working on
-                development and maintenance of multiple CRM projects for travel
-                and hospitality businesses, with modules focused on operations,
-                bookings, customer workflows, and business automation.
+                <i class="fa-regular fa-circle-check"></i> Delivering and
+                maintaining Laravel CRM modules for travel and hospitality
+                businesses across bookings, operations, and customer workflows.
               </li>
               <li>
                 <i class="fa-regular fa-circle-check"></i> Building and
-                improving Laravel-based modules for business workflows, customer
-                management, payment integration, and operational efficiency.
+                improving workflow, payment, and reporting features that reduce
+                manual handling and improve day-to-day team productivity.
               </li>
               <li>
-                <i class="fa-regular fa-circle-check"></i> Collaborating with
-                team members to create efficient and scalable web solutions,
-                including reporting dashboards and data-driven insights for
-                business decision-making.
+                <i class="fa-regular fa-circle-check"></i> Owning modules from
+                requirement discussion to production rollout in collaboration
+                with cross-functional stakeholders.
               </li>
               <li>
                 <i class="fa-regular fa-circle-check"></i> Using AI tools such
                 as ChatGPT, Codex, and Antigravity for faster debugging,
-                code/documentation support, and quicker delivery of feature
-                updates.
+                implementation support, and improved release turnaround.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-entry">
+            <div class="exp-header">
+              <div class="exp-title">Freelance Web Developer</div>
+              <div class="exp-date">Feb 2022 – Present</div>
+            </div>
+            <div class="exp-company">
+              <i class="fa-regular fa-building"></i> MSK Web Services
+              (Aemeskay) · Independent/Freelance · Shimla, Himachal Pradesh,
+              India
+            </div>
+            <ul class="exp-list">
+              <li>
+                <i class="fa-regular fa-circle-check"></i> Building registration
+                and auction platforms for cricket leagues and sports events with
+                admin-friendly workflows and participant-focused journeys.
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-check"></i> Delivering custom web
+                solutions with payment integration, event management, and SEO
+                optimization based on client operating needs.
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-check"></i> Applied AI-assisted
+                workflows to accelerate prototyping and issue resolution while
+                improving implementation quality across releases.
               </li>
             </ul>
           </div>
@@ -748,35 +845,92 @@
           <div class="exp-entry">
             <div class="exp-header">
               <div class="exp-title">Web Developer</div>
-              <div class="exp-date">March 2022 – Present</div>
+              <div class="exp-date">Feb 2015 – Present</div>
             </div>
             <div class="exp-company">
-              <i class="fa-regular fa-building"></i> SoundVisionary · Sanjauli,
-              Shimla
+              <i class="fa-regular fa-building"></i> SoundVisionary · Long-term
+              Project Engagement · Shimla, Himachal Pradesh, India
             </div>
             <ul class="exp-list">
               <li>
-                <i class="fa-regular fa-circle-check"></i> Developed
-                registration platforms for multiple cricket leagues and sports
-                events with streamlined admin workflows and user-friendly
-                interfaces.
+                <i class="fa-regular fa-circle-check"></i> Building and
+                maintaining websites and web modules for client projects with a
+                focus on reliability, performance, and business usability.
               </li>
               <li>
-                <i class="fa-regular fa-circle-check"></i> Built auction
-                software solutions for different clients, along with
-                payment-related and event management features tailored to client
-                requirements.
+                <i class="fa-regular fa-circle-check"></i> Supporting site
+                development, feature enhancement, and production issue
+                resolution across long-running web products.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-title">
+            <i class="fa-solid fa-laptop-code"></i> Previous Web Roles
+          </div>
+          <div class="exp-entry">
+            <div class="exp-header">
+              <div class="exp-title">Web Developer</div>
+              <div class="exp-date">Jul 2022 – Jan 2023</div>
+            </div>
+            <div class="exp-company">
+              <i class="fa-regular fa-building"></i> DeployDash · Full-time ·
+              Shimla, Himachal Pradesh, India
+            </div>
+            <ul class="exp-list">
+              <li>
+                <i class="fa-regular fa-circle-check"></i> Delivered website
+                development work and production support for client-facing
+                modules and feature rollouts.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-entry">
+            <div class="exp-header">
+              <div class="exp-title">Web Developer</div>
+              <div class="exp-date">May 2022 – Jun 2022</div>
+            </div>
+            <div class="exp-company">
+              <i class="fa-regular fa-building"></i> Planmans' Group · Full-time
+            </div>
+            <ul class="exp-list">
+              <li>
+                <i class="fa-regular fa-circle-check"></i> Worked on short-term
+                web development assignments using HTML5, Bootstrap, and
+                supporting frontend/backend tools.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-title">
+            <i class="fa-solid fa-user-tie"></i> Additional Experience
+          </div>
+
+          <div class="exp-entry">
+            <div class="exp-header">
+              <div class="exp-title">Operations and Support Roles</div>
+              <div class="exp-date">2015 – 2024</div>
+            </div>
+            <div class="exp-company">
+              <i class="fa-regular fa-building"></i> CAMS Limited, Computer Age
+              Management Services Limited, Supreme Committee for Delivery &
+              Legacy, airtel, Bahra University, Snow Valley Resorts
+            </div>
+            <ul class="exp-list">
+              <li>
+                <i class="fa-regular fa-circle-check"></i> Built strong
+                operational foundations in customer service, documentation,
+                data processing, coordination, and backend support.
               </li>
               <li>
-                <i class="fa-regular fa-circle-check"></i> Maintained website
-                functionality, implemented SEO improvements, and supported
-                reporting features to help clients track engagement and business
-                performance.
-              </li>
-              <li>
-                <i class="fa-regular fa-circle-check"></i> Applied generative
-                AI tools to accelerate prototyping, issue resolution, and
-                technical content drafting across client projects.
+                <i class="fa-regular fa-circle-check"></i> Worked across office,
+                field, and service environments, strengthening execution
+                discipline that now supports complex web delivery work.
               </li>
             </ul>
           </div>
@@ -796,9 +950,8 @@
                   Developed and maintained CRM modules for travel operations,
                   including lead handling, itinerary workflows, quotation
                   management, payment integration, and business process support
-                  for travel and hotel-related services. Used ChatGPT and Codex
-                  for faster logic validation, query optimization, and feature
-                  refinement.
+                  for travel and hotel-related services, improving day-to-day
+                  process reliability for operations teams.
                 </p>
               </div>
             </div>
@@ -810,9 +963,8 @@
                   Worked on hospitality-focused web systems for managing
                   customer data, operations, internal workflows, transaction
                   handling, and reporting using Laravel and modern web
-                  technologies. Leveraged AI tools to speed up debugging,
-                  improve module planning, and reduce turnaround time for
-                  updates.
+                  technologies, enabling smoother service and back-office
+                  coordination.
                 </p>
               </div>
             </div>
@@ -824,9 +976,7 @@
                   Built registration platforms for cricket tournaments with
                   admin-friendly workflows, event management support, payment
                   gateway integration, and optimized web pages for better reach
-                  and engagement. Applied generative AI support for rapid
-                  prototyping, validation of edge cases, and cleaner delivery
-                  documentation.
+                  and engagement for organizers and participants.
                 </p>
               </div>
             </div>
@@ -838,9 +988,7 @@
                   Created auction systems for client projects, helping
                   organizers manage event activities, participant-related
                   workflows, payment tracking, and performance reporting in a
-                  structured way. Used AI-assisted workflows to accelerate
-                  troubleshooting and improve implementation accuracy across
-                  release cycles.
+                  structured way with improved operational visibility.
                 </p>
               </div>
             </div>
@@ -857,8 +1005,7 @@
             <div class="edu-meta">Govt. Sec School Chotta Shimla, Shimla</div>
             <div class="edu-meta">2013 – 2015</div>
             <div class="small-note">
-              Completed senior secondary education with a Commerce
-              specialization. Built a strong foundation in business, finance,
+              Commerce background with a strong foundation in business, finance,
               and economics.
             </div>
           </div>
@@ -866,18 +1013,27 @@
             <div class="edu-title">Diploma in Basic Computer</div>
             <div class="edu-meta">Computer Fundamentals & Office Tools</div>
             <div class="small-note">
-              Learned basic computer operations, typing, internet usage, file
-              handling, and essential office productivity tools.
+              Foundation in computer operations, internet usage, file handling,
+              and office productivity tools.
             </div>
           </div>
           <div class="edu-item">
             <div class="edu-title">Self-Taught Coder</div>
             <div class="edu-meta">Practical Learning Through Real Projects</div>
             <div class="small-note">
-              Built coding knowledge through self-learning, hands-on practice,
-              and real-world work in PHP, Laravel, JavaScript, CRM systems, and
-              web application development.
+              Built practical coding skills through self-learning and real
+              client work in PHP, Laravel, JavaScript, and CRM systems.
             </div>
+          </div>
+        </div>
+
+        <div class="qr-section">
+          <img src="./cv-qr.png" alt="QR code for Manjeet Singh CV website" />
+          <div class="qr-copy">
+            Scan to view CV online:
+            <a href="https://mskwebservices.github.io/manjeet/"
+              >https://mskwebservices.github.io/manjeet/</a
+            >
           </div>
         </div>
 
