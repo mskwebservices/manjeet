@@ -468,12 +468,26 @@
         line-height: 1.25;
       }
 
+      .link-title {
+        font-weight: 700;
+        color: #1f2e4a;
+      }
+
       .link-favicon {
         width: 20px;
         height: 20px;
         border-radius: 3px;
         border: 1px solid #dbe6f2;
         flex-shrink: 0;
+      }
+
+      .links-category {
+        margin: 6px 0 4px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #36557f;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
 
       /* Responsive adjustments */
@@ -509,6 +523,10 @@
         .link-item {
           font-size: 0.72rem;
           padding: 7px 8px;
+        }
+        .links-category {
+          margin: 8px 0 4px;
+          font-size: 0.68rem;
         }
         .avatar-circle {
           width: 84px;
@@ -1132,32 +1150,15 @@
           <div class="section-title">
             <i class="fa-solid fa-link"></i> Project Links
           </div>
+          <div class="links-category">Sports</div>
           <ul class="links-list">
-            <li class="link-item">
-              <a href="https://deploydash.net" target="_blank"
-                ><img
-                  class="link-favicon"
-                  src="https://www.google.com/s2/favicons?domain=deploydash.net&sz=64"
-                  alt=""
-                />deploydash.net</a
-              >
-            </li>
-            <li class="link-item">
-              <a href="https://soundvisionarymedia.in" target="_blank"
-                ><img
-                  class="link-favicon"
-                  src="https://www.google.com/s2/favicons?domain=soundvisionarymedia.in&sz=64"
-                  alt=""
-                />soundvisionarymedia.in</a
-              >
-            </li>
             <li class="link-item">
               <a href="https://prohpcl.com" target="_blank"
                 ><img
                   class="link-favicon"
                   src="https://www.google.com/s2/favicons?domain=prohpcl.com&sz=64"
                   alt=""
-                />prohpcl.com</a
+                /><span class="link-title">Pro HPCL</span></a
               >
             </li>
             <li class="link-item">
@@ -1166,52 +1167,7 @@
                   class="link-favicon"
                   src="https://www.google.com/s2/favicons?domain=onlineplayerauction.in&sz=64"
                   alt=""
-                />onlineplayerauction.in</a
-              >
-            </li>
-            <li class="link-item">
-              <a href="https://soundvisionary.in" target="_blank"
-                ><img
-                  class="link-favicon"
-                  src="https://www.google.com/s2/favicons?domain=soundvisionary.in&sz=64"
-                  alt=""
-                />soundvisionary.in</a
-              >
-            </li>
-            <li class="link-item">
-              <a href="https://dafitness.in" target="_blank"
-                ><img
-                  class="link-favicon"
-                  src="https://www.google.com/s2/favicons?domain=dafitness.in&sz=64"
-                  alt=""
-                />dafitness.in</a
-              >
-            </li>
-            <li class="link-item">
-              <a href="https://www.sukhvasavillas.com" target="_blank"
-                ><img
-                  class="link-favicon"
-                  src="https://www.google.com/s2/favicons?domain=sukhvasavillas.com&sz=64"
-                  alt=""
-                />sukhvasavillas.com</a
-              >
-            </li>
-            <li class="link-item">
-              <a href="https://groombridge.in/" target="_blank"
-                ><img
-                  class="link-favicon"
-                  src="https://www.google.com/s2/favicons?domain=groombridge.in&sz=64"
-                  alt=""
-                />groombridge.in</a
-              >
-            </li>
-            <li class="link-item">
-              <a href="https://bikebros.in/" target="_blank"
-                ><img
-                  class="link-favicon"
-                  src="https://www.google.com/s2/favicons?domain=bikebros.in&sz=64"
-                  alt=""
-                />bikebros.in</a
+                /><span class="link-title">Online Player Auction</span></a
               >
             </li>
             <li class="link-item">
@@ -1220,16 +1176,7 @@
                   class="link-favicon"
                   src="https://www.google.com/s2/favicons?domain=friendsclubnerwa.com&sz=64"
                   alt=""
-                />friendsclubnerwa.com</a
-              >
-            </li>
-            <li class="link-item">
-              <a href="https://oakwoodhamletresorts.com" target="_blank"
-                ><img
-                  class="link-favicon"
-                  src="https://www.google.com/s2/favicons?domain=oakwoodhamletresorts.com&sz=64"
-                  alt=""
-                />oakwoodhamletresorts.com</a
+                /><span class="link-title">Friends Club Nerwa</span></a
               >
             </li>
             <li class="link-item">
@@ -1238,7 +1185,87 @@
                   class="link-favicon"
                   src="https://www.google.com/s2/favicons?domain=wisehimachal.com&sz=64"
                   alt=""
-                />wisehimachal.com</a
+                /><span class="link-title">Wise Himachal</span></a
+              >
+            </li>
+          </ul>
+
+          <div class="links-category">Hospitality</div>
+          <ul class="links-list">
+            <li class="link-item">
+              <a href="https://www.sukhvasavillas.com" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=sukhvasavillas.com&sz=64"
+                  alt=""
+                /><span class="link-title">Sukhvasa Villas</span></a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://oakwoodhamletresorts.com" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=oakwoodhamletresorts.com&sz=64"
+                  alt=""
+                /><span class="link-title">Oakwood Hamlet Resorts</span></a
+              >
+            </li>
+          </ul>
+
+          <div class="links-category">Business And Services</div>
+          <ul class="links-list">
+            <li class="link-item">
+              <a href="https://deploydash.net" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=deploydash.net&sz=64"
+                  alt=""
+                /><span class="link-title">DeployDash</span></a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://soundvisionarymedia.in" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=soundvisionarymedia.in&sz=64"
+                  alt=""
+                /><span class="link-title">SoundVisionary Media</span></a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://soundvisionary.in" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=soundvisionary.in&sz=64"
+                  alt=""
+                /><span class="link-title">SoundVisionary</span></a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://dafitness.in" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=dafitness.in&sz=64"
+                  alt=""
+                /><span class="link-title">DA Fitness</span></a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://groombridge.in/" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=groombridge.in&sz=64"
+                  alt=""
+                /><span class="link-title">GroomBridge</span></a
+              >
+            </li>
+            <li class="link-item">
+              <a href="https://bikebros.in/" target="_blank"
+                ><img
+                  class="link-favicon"
+                  src="https://www.google.com/s2/favicons?domain=bikebros.in&sz=64"
+                  alt=""
+                /><span class="link-title">BikeBros</span></a
               >
             </li>
             <li class="link-item">
@@ -1247,7 +1274,7 @@
                   class="link-favicon"
                   src="https://www.google.com/s2/favicons?domain=bajrangbouncers.com&sz=64"
                   alt=""
-                />bajrangbouncers.com</a
+                /><span class="link-title">Bajrang Bouncers</span></a
               >
             </li>
           </ul>
