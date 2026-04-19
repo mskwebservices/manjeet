@@ -524,25 +524,39 @@
         .title-section {
           column-gap: 10px;
         }
+        .title-section {
+          grid-template-columns: 1fr;
+          row-gap: 6px;
+        }
         .title-section h1 {
-          font-size: 2rem;
+          font-size: 1.75rem;
           margin-bottom: 2px;
+          white-space: normal;
         }
         .role-tag {
           font-size: 0.72rem;
           padding: 4px 10px;
         }
         .contact-row {
-          gap: 5px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-self: start;
+          gap: 4px;
+        }
+        .contact-row span:first-child {
+          width: auto;
+          grid-column: auto;
         }
         .contact-row span {
           font-size: 0.7rem;
-          padding: 4px 8px;
-          border-radius: 10px;
+          padding: 3px 7px;
+          border-radius: 8px;
+          max-width: 100%;
         }
 
         .contact-row a {
           text-decoration: none;
+          word-break: break-all;
         }
         .summary-elevated {
           padding: 10px 12px;
@@ -817,7 +831,7 @@
           <div class="exp-entry">
             <div class="exp-header">
               <div class="exp-title">Part-time Remote Web Developer</div>
-              <div class="exp-date">Feb 2015 – Currently</div>
+              <div class="exp-date">Feb 2015 – Present</div>
             </div>
             <div class="exp-company">
               <i class="fa-regular fa-building"></i> SoundVisionary ·
